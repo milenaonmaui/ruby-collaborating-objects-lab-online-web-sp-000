@@ -1,3 +1,4 @@
+require pry
 class MP3Importer
   attr_accessor :path
   def initialize(path)
@@ -14,6 +15,7 @@ class MP3Importer
   def import(filenames)
     filenames.each do |filename|
       filename = filename.split(".mp3")[0]
+      binding.pry
       Song.new_by_filename(filename)
     end
   end
