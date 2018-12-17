@@ -9,8 +9,9 @@ class Song
     name_array = filename.split(" - ")
     song = self.new(name_array[1])
     artist_name = name_array[0]
-    song.artist = Artist.new(artist_name)
+    song.artist = Artist.find_or_create_by_name(artist_name)
     song.artist.save
+    song.artist.add_song(song)
     song
   end
 end
