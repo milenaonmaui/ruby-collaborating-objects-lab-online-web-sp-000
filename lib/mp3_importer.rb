@@ -11,6 +11,9 @@ class MP3Importer
     end
   end
 
-  def import
+  def import(filenames)
+    filenames.each do |filename|
+      filename = filename.split(".mp3")[0]
+      
   end
 end
