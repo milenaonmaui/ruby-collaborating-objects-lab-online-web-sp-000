@@ -12,8 +12,8 @@ class MP3Importer
     end
   end
 
-  def import(filenames)
-    filenames.each do |filename|
+  def import
+    self.files.each do |filename|
       filename = filename.split(".mp3")[0]
       binding.pry
       Song.new_by_filename(filename)
