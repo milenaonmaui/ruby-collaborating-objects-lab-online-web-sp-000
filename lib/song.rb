@@ -10,6 +10,7 @@ class Song
     song = self.new(name_array[1])
     artist_name = name_array[0]
     song.artist = Artist.new(artist_name)
+    song.artist.save
     song
   end
 end
